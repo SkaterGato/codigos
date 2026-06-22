@@ -1,28 +1,24 @@
-import java.util.Scanner; // Importamos el lector de teclado
+import java.util.Scanner;
 
 public class TablaMultiplicar {
     public static void main(String[] args) {
+        // Creamos el scanner para leer la entrada del usuario
         Scanner teclado = new Scanner(System.in);
-
-        // 1. Solicitamos al usuario el número de la tabla
-        System.out.print("¿De qué número deseas ver la tabla de multiplicar?: ");
+        
+        System.out.print("Introduce un número (preferiblemente del 1 al 12): ");
         int numero = teclado.nextInt();
-
-        System.out.println("\n=======================");
-        System.out.println("   TABLA DEL " + numero);
-        System.out.println("=======================");
-
-        // 2. Usamos el ciclo 'for' para ir del 1 al 12
-        // i++ hace que la variable 'i' aumente de 1 en 1 en cada vuelta
+        
+        System.out.println("\n--- Tabla de multiplicar del " + numero + " ---");
+        
+        // Bucle for que va del 1 al 12
         for (int i = 1; i <= 12; i++) {
-            int resultado = numero * i; // Calculamos la multiplicación actual
-            
-            // Estructuramos la salida para que se vea bonita (ej: 5 x 1 = 5)
+            int resultado = numero * i;
             System.out.println(numero + " x " + i + " = " + resultado);
         }
-
-        System.out.println("=======================");
         
-        teclado.close(); // Cerramos el scanner
+        System.out.println("------------------------------------");
+        
+        // Cerramos el scanner
+        teclado.close();
     }
 }
